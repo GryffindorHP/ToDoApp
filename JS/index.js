@@ -1,13 +1,15 @@
 // Initialize a new TaskManager with currentId set to 0
 const taskManager = new TaskManager(0);
 
-// Select the New Task Form
+taskManager.load();
+
+taskManager.render();
+
+
 const newTaskForm = document.querySelector('#newTaskForm');
 
-// Add an 'onsubmit' event listener
 newTaskForm.addEventListener('submit', (event) => {
-    // Prevent default action
-    event.preventDefault();
+event.preventDefault();
 
     // Select the inputs
     const newTaskNameInput = document.querySelector('#newTaskNameInput');
@@ -86,21 +88,7 @@ tasksList.addEventListener('click', (event) => {
         // Delete the task
         taskManager.deleteTask(taskId);
 
-         // Create an empty array and store it in a new variable, newTasks
-         const newTasks = [];
-
-         // Loop over the tasks
-         for (let i = 0; i < this.tasks.length; i++) {
-             // Get the current task in the loop
-             const task = this.tasks[i];
- 
-             // Check if the task id is not the task id passed in as a parameter
-             if (task.id !== taskId) {
-                 // Push the task to the newTasks array
-                 newTasks.push(task);
-             }
-         }
-
+         
         // Save the tasks to localStorage
         taskManager.save();
 

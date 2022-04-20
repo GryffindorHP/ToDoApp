@@ -1,3 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    
+    <title>Time To Plan</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<div class="row">
+    <div class="column">
+        <img src="https://cdn2.iconfinder.com/data/icons/work-from-home-malibu-vol-1/128/Daily_Routine-512.png" 
+        srcset="https://cdn2.iconfinder.com/data/icons/work-from-home-malibu-vol-1/128/Daily_Routine-1024.png 2x" alt="Calendar, clock, daily, routine icon - Download on Iconfinder" 
+        class="d-block mx-auto" style="width: 100%;">  
+    </div>
+</div>
+
+<body>
+    <div class="container" class="basic" class="blur">
+        <br>
+        <br>
+        <h1 style = "font-size: 300%">Time to Plan</h1>
+        <br>
+        <br>
+        <div class="row mb-5" class="basic" class="blur">
+            <div class="col">
+                <h2>New Task</h2>
+                <form id="newTaskForm">
+                    <div class="form-group">
+                        <label for="newTaskNameInput">Name</label>
+                        <input type="text" class="form-control" id="newTaskNameInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="newTaskDescription">Description</label>
+                        <textarea type="text" class="form-control" id="newTaskDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                            <label for="assigned to">Assigned To</label>
+                            <select class="form-control" id="assigned to">
+                                <option disable selected></option>
+                                <option value="tiffany">Tiffany Clark</option>
+                                <option value="tasha">Tasha Collins</option>
+                                <option value ="paula">Paula Rice</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="newTaskDueDate">Due Date</label>
+                            <input type="date" class="form-control" id="newTaskDueDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="newTaskStatus">Status</label>
+                            <select class="form-control" id="status">
+                                <option disable selected></option>
+                                <option value="pending">Pending</option>
+                                <option value="in progress">In Progress</option>
+                                <option value ="review">Review</option>
+                                <option value ="completed">Completed</option>
+                            </select>
+                                                
+                    </div>
+<!--Do Not touch JavaScript code -->
+                    <div id="alertMe" class="alert alert-danger" role="alert">
+                        'Please Try Again!'
+                      </div>
+                      <button id="newTaskFormButton" type="submit" class="btn btn-primary btn-lg btn-block">Add Task</button>
+                </form>
+            </div>
+        </div>
+    
+    <script src="js/taskManger.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -73,4 +154,5 @@
     <script src="js/TaskManager.js"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>
